@@ -1,0 +1,237 @@
+@charset "ISO-8859-1";
+* {
+  font-family: 'Permanent Marker', cursive;
+  color: black; 
+}
+
+/* Login */
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.login::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  background-image: url("../img/atgaaa10.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(5px);
+}
+
+/* Home */
+.home {
+  background-image: url("../img/630517blur.jpg"); 
+}
+
+.navbar {
+  padding-right: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to left, #fff7dc, #f7e38c);
+  border-bottom: 5px solid black; 
+}
+
+.navbar .img-header {
+  width: 100%;
+  max-width: 100px;
+  margin-left: 20px; 
+}
+
+main {
+  margin: 50px 0;
+  padding: 30px; 
+}
+
+.menu-main {
+  width: 65%;
+  margin: 20px auto;
+}
+
+.btn {
+  height: 100%;
+  font-size: 2rem;
+}
+
+.btn-submenu {
+  font-size: 1.6rem;
+}
+
+.btn, .btn-submenu, .btn-form {
+  background: linear-gradient(to left, #fff7dc, #f7e38c);
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.btn:hover, .btn-submenu:hover, .btn-form:hover {
+  font-weight: bold;
+  border: 3px solid #406d40;
+  color: #406d40; 
+}
+
+.btn:active, .btn-submenu:active, .btn-form:active {
+  transform: translateY(4px); 
+}
+
+footer {
+  margin-top: 80px;
+  padding: 0 0 0 20px; 
+}
+
+.p-footer {
+  color: white; 
+}
+
+/* Menu Options */
+.invisivel {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+.visivel {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+
+/* Form Ninja */
+.fundo-form-ninja {
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.fundo-form-ninja::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+
+  background-image: url("../img/Konoha_team.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(3px);
+}
+
+.form-container {
+  margin-top: 20px;
+
+  z-index: 2;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.form-area {
+  width: 400px;
+  margin: 10px;
+  padding: 20px;
+  
+  border: 1px solid #888888;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px #888888;
+  
+  font-size: 20px;
+  background-image: linear-gradient(to left, #fff7dc, #f7e38c); 
+}
+
+.form-control {
+  font-size: 16px; 
+}
+
+textarea {
+  resize: none; 
+  font-size: 1.3rem;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between; 
+}
+
+/* Form Missão */
+.fundo-form-missao {
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.fundo-form-missao::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+
+  background-image: url("../img/salaMissao.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  filter: blur(4px);
+}
+
+.btn-form {
+	padding: 10px 20px;
+	color: black;
+}
+
+.btn-form:hover {
+	text-decoration: none;
+}
+
+.fundo-form-missao .form-container .form-area {
+  width: 500px;
+}
+
+/* Exibir Lista */
+
+.table thead th {
+  border-bottom: 1px solid rgb(226, 173, 124);
+}
+
+.table thead th:last-child {
+	width: 125px;
+}
+
+.table td, .table th {
+  border-top: 1px solid rgb(226, 173, 124);
+}
+
+thead tr {
+  background: linear-gradient(to left, #fff7dc, #f7e38c);
+  font-size: 1.4rem;
+}
+
+tbody tr:hover {
+  background: rgba(226, 173, 124, 0.5);
+}
+
+.selected {
+  background: rgba(226, 173, 124, 0.5);
+}
+
+td a {
+  margin: 0px 15px;
+}
