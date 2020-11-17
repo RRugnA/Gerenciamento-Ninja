@@ -26,16 +26,21 @@
 			
 			<div class="form-group">
 				<label class="mb-0" for="ninjaClass">Classe:</label>
-						<select class="form-control" name="ninjaClass" id="ninjaClass">
-							<option>Genin</option>
-							<option>Chunin</option>
-							<option>Jounin</option>
-						</select>
+					<select class="form-control" name="ninjaClass" id="ninjaClass">
+						<option>Genin</option>
+						<option>Chunin</option>
+						<option>Jounin</option>
+					</select>
 			</div>
 			
 			<div class="form-group">
 				<label class="mb-0" for="ninjaTeam">Equipe:</label>
-				<input class="form-control" type="text" name="ninjaTeam" id="ninjaTeam" required="required"/>
+					<select class="form-control" name="ninjaTeam" id="ninjaTeam">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
 			</div>
 			
 			<input type="hidden" name="action" value="CadastrarNinja" />

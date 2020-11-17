@@ -21,7 +21,7 @@ public class CadastrarNinja implements Action {
 		
 		String name = request.getParameter("ninjaName");
 		String ninjaClass = request.getParameter("ninjaClass");
-		String team = request.getParameter("ninjaTeam");
+		int team = Integer.parseInt(request.getParameter("ninjaTeam"));
 		
 		Ninja ninja = new Ninja(name, ninjaClass, team);
 		

@@ -5,16 +5,22 @@ public class Ninja {
 	private int id;
 	private String name;
 	private String ninjaClass;
-	private String team;
+	private int team;
 	
-	public Ninja(String name, String ninjaClass, String team) {
+	public Ninja(String name, String ninjaClass, int team) {
 		this.name = name;
 		this.ninjaClass = ninjaClass;
 		this.team = team;
 	}
 	
+	public Ninja(int id, String name, String ninjaClass) {
+		this.id = id;
+		this.name = name;
+		this.ninjaClass = ninjaClass;
+	}
+	
 
-	public Ninja(int id, String name, String ninjaClass, String team) {
+	public Ninja(int id, String name, String ninjaClass, int team) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -22,7 +28,9 @@ public class Ninja {
 		this.team = team;
 	}
 
-
+	public Ninja() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public int getId() {
 		return id;
@@ -48,11 +56,11 @@ public class Ninja {
 		this.ninjaClass = ninjaClass;
 	}
 
-	public String getTeam() {
+	public int getTeam() {
 		return team;
 	}
 
-	public void setTeam(String team) {
+	public void setTeam(int team) {
 		this.team = team;
 	}
 	

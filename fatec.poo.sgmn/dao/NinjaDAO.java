@@ -21,13 +21,13 @@ public class NinjaDAO implements DAO<Ninja> {
 	@Override
 	public void create(Ninja ninja) {
 		
-		String sql = "insert into ninjas(nja_name, nja_class, nja_team) values (?, ?, ?)";
+		String sql = "insert into ninjas(nja_name, nja_class, nja_team_id) values (?, ?, ?)";
 		
 		try(PreparedStatement stm = connection.prepareStatement(sql)){
 			
 			stm.setString(1, ninja.getName());
 			stm.setString(2,  ninja.getNinjaClass());
-			stm.setString(3, ninja.getTeam());
+			stm.setInt(3, ninja.getTeam());
 			
 			System.out.println("Registrado no banco com sucesso!");
 			stm.execute();
@@ -42,7 +42,7 @@ public class NinjaDAO implements DAO<Ninja> {
 		
 		List<Ninja> ninjas = new ArrayList<Ninja>();
 		
-		String sql = "select nja_id, nja_name, nja_class, nja_team from ninjas";
+		String sql = "select nja_id, nja_name, nja_class, nja_team_id from ninjas";
 		
 		try(PreparedStatement stm = connection.prepareStatement(sql)){
 			stm.execute();
@@ -50,7 +50,7 @@ public class NinjaDAO implements DAO<Ninja> {
 			try(ResultSet rst = stm.getResultSet()){
 				
 				while(rst.next()) {
-					Ninja ninja = new Ninja(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getString(4));
+					Ninja ninja = new Ninja(rst.getInt(1), rst.getString(2), rst.getString(3), rst.getInt(4));
 					
 					ninjas.add(ninja);
 				}

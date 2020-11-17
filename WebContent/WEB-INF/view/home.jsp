@@ -37,7 +37,7 @@
 
 						<div>
 							<form class="menu-main" action="${ linkEntradaServlet }" method="post">	
-								<input type="hidden" name="action" value="ShowNinjas" />
+								<input type="hidden" name="action" value="ShowTeams" />
 								<input type="hidden" name="list" value="ninja" />
 								<button class="btn-submenu btn-block" type="submit">
 									Exibir Lista de Ninjas						
