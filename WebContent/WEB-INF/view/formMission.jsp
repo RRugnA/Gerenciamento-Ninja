@@ -46,18 +46,26 @@
 						</div>
 					</div>
 
-				</div>
-				
+					<div class="col">
+						<label class="mb-0" for="ninjaTeam">Equipe:</label>
+							<select class="form-control" name="ninjaTeam" id="ninjaTeam">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+					</div>
 
+				</div>			
+				
 				<div class="form-group">
 					<label class="mb-0" for="missionDescription">Descricao:</label>
 					<textarea class="form-control" name="missionDescription" id="missionDescription" rows="3" required="required"></textarea>
 				</div>
 				
-<!-- ALTERAR --><input type="hidden" name="action" value="Home" /> 
+				<input type="hidden" name="action" value="CadastrarMissao" /> 
 				
 				<div class="form-footer">
-<!-- falta implementar -->
           			<a class="btn-form" href="?action=Home" role="button">Voltar</a>
           			<button type="submit" class="btn-form">Cadastrar</button>
 				</div>			

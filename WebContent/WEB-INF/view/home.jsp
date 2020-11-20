@@ -37,7 +37,7 @@
 
 						<div>
 							<form class="menu-main" action="${ linkEntradaServlet }" method="post">	
-								<input type="hidden" name="action" value="ShowTeams" />
+								<input type="hidden" name="action" value="ExibirEquipes" />
 								<input type="hidden" name="list" value="ninja" />
 								<button class="btn-submenu btn-block" type="submit">
 									Exibir Lista de Ninjas						
@@ -72,7 +72,7 @@
 						<div>
 <!-- 							falta implementar -->
 							<form class="menu-main" action="${ linkEntradaServlet }" method="post">	
-								<input type="hidden" name="action" value="Home" />
+								<input type="hidden" name="action" value="ExibirMissao" />
 								<input type="hidden" name="list" value="mission" />
 								<button class="btn-submenu btn-block" type="submit">
 									Exibir Lista de Missões						

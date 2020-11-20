@@ -12,6 +12,7 @@
 <body>
 
 	<c:import url="header.jsp" />
+	
 	<div class="container">
 		<h1>Cadastro efetuado com sucesso!</h1>
 		

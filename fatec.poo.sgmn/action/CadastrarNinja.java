@@ -39,7 +39,7 @@ public class CadastrarNinja implements Action {
 		
 		request.setAttribute("ninja", ninja);
 		
-		return "forward:confirmaCadastro.jsp";
+		return "forward:confirmaCadastroNinja.jsp";
 
 		
 	}

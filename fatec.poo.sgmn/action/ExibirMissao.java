@@ -11,23 +11,24 @@ import javax.servlet.http.HttpServletResponse;
 
 import connection.ConnectionFactory;
 import dao.DAO;
-import dao.NinjaDAO;
-import model.Ninja;
+import dao.MissaoDAO;
+import model.Missao;
 
-public class ShowNinjas implements Action {
+public class ExibirMissao implements Action {
 
 	@Override
 	public String run(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		System.out.println("Listando Ninjas");
+		System.out.println("Listando Missões");
 		
 		try(Connection connection = new ConnectionFactory().getConnection()){
 			
-			DAO<Ninja> ninjaDao = new NinjaDAO(connection);
+			DAO<Missao> missaoDao = new MissaoDAO(connection);
 			
-			List<Ninja> ninjaList = ninjaDao.read();
+			List<Missao> missaoList = missaoDao.read();
 			
-			request.setAttribute("ninjas", ninjaList);
+			request.setAttribute("missoes", missaoList);
+			
 			
 		} catch (SQLException e) {
 			
@@ -35,7 +36,7 @@ public class ShowNinjas implements Action {
 			e.printStackTrace();
 		}
 		
-		return "forward:listaNinjas.jsp";
+		return "forward:listaMissoes.jsp";
 	}
 
 }

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
     <link rel="StyleSheet" type="text/css" href="css/style.css" media="screen" >
     <script src="https://kit.fontawesome.com/add39efd86.js" crossorigin="anonymous"></script>
-<title>SGMN - Lista de Ninjas</title>
+<title>SGMN - Lista de Missões</title>
 </head>
 <body>
 
@@ -27,27 +27,32 @@
 	    		<tr>
 	          		<th scope="col">#</th>
 	          		<th scope="col">Nome</th>
-		          	<th scope="col">Classe</th>
+		          	<th scope="col">Rank</th>
+		          	<th scope="col">Pagamento</th>
 		          	<th scope="col">Equipe</th>
-		          	<th scope="col">Líder</th>
 		          	<th scope="col"></th>
 	        	</tr>
 	    	</thead>
 	      	<tbody>
 
-			<c:forEach items="${ teams }" var="team" >
+			<c:forEach items="${ missoes }" var="missao" >
 
 				<tr>			
 					
-					<td>${ team.ninjas[0].id }</td>
-					<td>${ team.ninjas[0].name }</td>
-					<td>${ team.ninjas[0].ninjaClass }</td>
-					<td>${ team.id }</td>
-					<td>${ team.lider }</td>
+<%-- 					<td>${ team.ninjas[0].id }</td> --%>
+<%-- 					<td>${ team.ninjas[0].name }</td> --%>
+<%-- 					<td>${ team.ninjas[0].ninjaClass }</td> --%>
+<%-- 					<td>${ team.id }</td> --%>
+<%-- 					<td>${ team.lider }</td> --%>
+					<td>${ missao.id }</td>
+					<td>${ missao.name }</td>
+					<td>${ missao.rank }</td>
+					<td>$ ${ missao.pay }</td>
+					<td>${ missao.teamLider }</td>
 					
 					<td>
-						<a href="/?action=SelectNinja&id=${ ninja.id }"><i class="fas fa-edit"></i>
-						</a><a href="/?action=Delete&nome=ninja&id=${ ninja.id }"><i class="fas fa-trash-alt"></i></a>
+						<a href="/?action=SelectNinja&id=${ missao.id }"><i class="fas fa-edit"></i>
+						</a><a href="/?action=Delete&nome=ninja&id=${ missao.id }"><i class="fas fa-trash-alt"></i></a>
 					</td>
 				</tr>
 				

@@ -14,7 +14,7 @@ import dao.DAO;
 import dao.TeamDAO;
 import model.Team;
 
-public class ShowTeams implements Action {
+public class ExibirEquipes implements Action {
 
 	@Override
 	public String run(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
