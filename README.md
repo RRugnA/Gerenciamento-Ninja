@@ -17,3 +17,4 @@ Repositório destinado ao projeto da disciplina de POO, 4º Semestre da FATEC Mo
 ## Como rodar o projeto:
 - Após compilar o projeto com a ide e subir no servidor, acesse localhost:8080/SGMN/?action=Home
 - Necessário importar o dump do banco de dados para correto funcionamento do CRUD
+- Após a importação do dump, configurar o package "connection" com as configurações do seu banco (o projeto utiliza a porta localhost:3308).
