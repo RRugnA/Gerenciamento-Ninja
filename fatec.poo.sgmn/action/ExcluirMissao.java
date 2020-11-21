@@ -3,7 +3,6 @@ package action;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -11,32 +10,32 @@ import javax.servlet.http.HttpServletResponse;
 
 import connection.ConnectionFactory;
 import dao.DAO;
-import dao.TeamDAO;
-import model.Team;
+import dao.MissaoDAO;
+import model.Missao;
 
-public class ExibirEquipes implements Action {
+public class ExcluirMissao implements Action {
 
 	@Override
 	public String run(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		System.out.println("Listando Ninjas");
+		System.out.println("Removendo missão!");
+		
+		String paramId = request.getParameter("id");
+		int id = Integer.parseInt(paramId);
+	 
+		System.out.println(id);
+	 
+		Missao missao = new Missao(id);
 		
 		try(Connection connection = new ConnectionFactory().getConnection()){
-			
-			DAO<Team> teamDao = new TeamDAO(connection);
-			
-			List<Team> teamList = teamDao.read();
-			
-			request.setAttribute("teams", teamList);
-			
+			DAO<Missao> missaoDAO = new MissaoDAO(connection);
+			missaoDAO.delete(missao);
 			
 		} catch (SQLException e) {
-			
-			System.out.println("Não foi possivel conectar ao servidor.");
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		return "forward:listaTeams.jsp";
+	 
+		return "redirect:?action=ExibirMissao";
 	}
 
 }

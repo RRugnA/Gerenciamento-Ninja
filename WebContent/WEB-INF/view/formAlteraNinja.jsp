@@ -9,7 +9,7 @@
 	<meta charset="ISO-8859-1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 	<link rel="StyleSheet" type="text/css" href="./css/style.css" media="screen" >
-	<title>Insert title here</title>
+	<title>SGMN - Alterar Ninja</title>
 </head>
 <body>
 	<c:import url="header.jsp" />
@@ -17,11 +17,11 @@
 	<div class="fundo-form-ninja">
 		<div class="container form-container" >		
 			<form class="form-area" action="${ linkEntradaServlet }" method="post">
-			<h1 class="font-weight-bold">Cadastro Ninja</h1>
+			<h1 class="font-weight-bold">Alterar Ninja</h1>
 			
 			<div class="form-group">
 				<label class="mb-0" for="ninjaName">Nome:</label>
-				<input class="form-control" type="text" name="ninjaName" id="ninjaName" required="required"/>
+				<input class="form-control" type="text" name="ninjaName" id="ninjaName" value="${ ninja.name }" required="required"/>
 			</div>
 			
 			<div class="form-group">
@@ -43,11 +43,12 @@
 					</select>
 			</div>
 			
-			<input type="hidden" name="action" value="CadastrarNinja" />
+			<input type="hidden" name="ninjaId" value="${ ninja.id }" />
+			<input type="hidden" name="action" value="AlterarNinja" />
 			
 			<div class="form-footer">
 				<a class="btn-form" href="?action=Home" role="button">Voltar</a>
-				<button type="submit" class="btn-form">Cadastrar</button>
+				<button type="submit" class="btn-form">Alterar</button>
 			</div>			
 		</form>
 	</div>

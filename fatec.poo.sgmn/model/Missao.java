@@ -11,8 +11,24 @@ public class Missao {
 	private int teamId;
 	private String teamLider;
 	
-
+	public Missao() {
+		
+	}
+	
+	public Missao(int id) {
+		this.id = id;
+	}
+	
 	public Missao(String name, String rank, double pay, String descricao, int teamId) {
+		this.name = name;
+		this.rank = rank;
+		this.pay = pay;
+		this.desc = descricao;
+		this.teamId = teamId;
+	}
+	
+	public Missao(int id, String name, String rank, double pay, int teamId, String descricao) {
+		this.id = id;
 		this.name = name;
 		this.rank = rank;
 		this.pay = pay;
@@ -29,9 +45,7 @@ public class Missao {
 		this.teamLider = teamLider;
 	}
 
-	public Missao() {
-		
-	}
+	
 
 	public int getId() {
 		return id;

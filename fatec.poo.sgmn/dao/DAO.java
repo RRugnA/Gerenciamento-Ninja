@@ -1,7 +1,6 @@
 package dao;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface DAO<T> {
 
@@ -9,9 +8,11 @@ public interface DAO<T> {
 	
 	List<T> read();
 	
-	void update(T t, String[] params);
+	//void update(T t, String[] params);
+	void update(T t);
 	
 	void delete(T t);
 
-	Optional<T> get(long id);
+	T getId(T t) ;
+	
 }

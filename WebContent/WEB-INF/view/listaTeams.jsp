@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c-rt" %>
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 	<meta charset="ISO-8859-1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -46,8 +46,8 @@
 					<td>${ team.lider }</td>
 					
 					<td>
-						<a href="/?action=SelectNinja&id=${ ninja.id }"><i class="fas fa-edit"></i>
-						</a><a href="/?action=Delete&nome=ninja&id=${ ninja.id }"><i class="fas fa-trash-alt"></i></a>
+						<a href="/SGMN/?action=SelecionaNinja&id=${ team.ninjas[0].id }"><i class="fas fa-edit"></i>
+						</a><a href="/SGMN/?action=Delete&nome=ninja&id=${ team.ninjas[0].id }"><i class="fas fa-trash-alt"></i></a>
 					</td>
 				</tr>
 				

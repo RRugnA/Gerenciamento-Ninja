@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c-rt" %>
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 	<meta charset="ISO-8859-1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -29,6 +29,7 @@
 	          		<th scope="col">Nome</th>
 		          	<th scope="col">Rank</th>
 		          	<th scope="col">Pagamento</th>
+		          	<th scope="col">Descricao</th>
 		          	<th scope="col">Equipe</th>
 		          	<th scope="col"></th>
 	        	</tr>
@@ -38,21 +39,17 @@
 			<c:forEach items="${ missoes }" var="missao" >
 
 				<tr>			
-					
-<%-- 					<td>${ team.ninjas[0].id }</td> --%>
-<%-- 					<td>${ team.ninjas[0].name }</td> --%>
-<%-- 					<td>${ team.ninjas[0].ninjaClass }</td> --%>
-<%-- 					<td>${ team.id }</td> --%>
-<%-- 					<td>${ team.lider }</td> --%>
+			
 					<td>${ missao.id }</td>
 					<td>${ missao.name }</td>
 					<td>${ missao.rank }</td>
 					<td>$ ${ missao.pay }</td>
+					<td>${ missao.desc }</td>
 					<td>${ missao.teamLider }</td>
 					
 					<td>
-						<a href="/?action=SelectNinja&id=${ missao.id }"><i class="fas fa-edit"></i>
-						</a><a href="/?action=Delete&nome=ninja&id=${ missao.id }"><i class="fas fa-trash-alt"></i></a>
+						<a href="/SGMN/?action=SelecionarMissao&id=${ missao.id }"><i class="fas fa-edit"></i>
+						</a><a href="/SGMN/?action=ExcluirMissao&id=${ missao.id }"><i class="fas fa-trash-alt"></i></a>
 					</td>
 				</tr>
 				

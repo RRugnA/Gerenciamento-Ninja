@@ -6,6 +6,15 @@ public class Ninja {
 	private String name;
 	private String ninjaClass;
 	private int team;
+	private String ninjaLeader;
+	
+	public Ninja() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Ninja(int id) {
+		this.id = id;
+	}
 	
 	public Ninja(String name, String ninjaClass, int team) {
 		this.name = name;
@@ -21,16 +30,20 @@ public class Ninja {
 	
 
 	public Ninja(int id, String name, String ninjaClass, int team) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.ninjaClass = ninjaClass;
 		this.team = team;
 	}
-
-	public Ninja() {
-		// TODO Auto-generated constructor stub
+	
+	public Ninja(int id, String name, String ninjaClass, String ninjaLeader) {
+		this.id = id;
+		this.name = name;
+		this.ninjaClass = ninjaClass;
+		this.ninjaLeader = ninjaLeader;
 	}
+
+	
 
 	public int getId() {
 		return id;
@@ -63,6 +76,15 @@ public class Ninja {
 	public void setTeam(int team) {
 		this.team = team;
 	}
+
+	public String getNinjaLeader() {
+		return ninjaLeader;
+	}
+
+	public void setNinjaLeader(String ninjaLeader) {
+		this.ninjaLeader = ninjaLeader;
+	}
+	
 	
 	
 }

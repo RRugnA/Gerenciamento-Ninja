@@ -4,7 +4,7 @@
 <c:url value="/" var="linkEntradaServlet"/>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 	<meta charset="ISO-8859-1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -37,7 +37,7 @@
 
 						<div>
 							<form class="menu-main" action="${ linkEntradaServlet }" method="post">	
-								<input type="hidden" name="action" value="ExibirEquipes" />
+								<input type="hidden" name="action" value="ExibirNinjas" />
 								<input type="hidden" name="list" value="ninja" />
 								<button class="btn-submenu btn-block" type="submit">
 									Exibir Lista de Ninjas						
