@@ -34,6 +34,9 @@ Repositório destinado ao projeto da disciplina de POO, 4º Semestre da FATEC Mo
 ## Linguagem:
 - Java
 
+## Banco de Dados:
+- MySql
+
 ## Servidor:
 - Tomcat v9
 
