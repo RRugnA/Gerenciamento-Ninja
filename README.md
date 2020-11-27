@@ -39,5 +39,5 @@ Repositório destinado ao projeto da disciplina de POO, 4º Semestre da FATEC Mo
 
 ## Como rodar o projeto:
 - Após compilar o projeto com a ide e subir no servidor, acesse localhost:8080/SGMN/?action=Home
-- Necessário importar o dump do banco de dados para correto funcionamento do CRUD
-- Após a importação do dump, configurar a classe ConnectionFactory dentro da package "connection" com as configurações do seu banco (o projeto atualmente utiliza a porta localhost:3308).
+- Necessário importar o dump do banco de dados para correto funcionamento do CRUD (nome do db utilizado no projeto: "sgmn")
+- Após a importação do dump, configurar a classe ConnectionFactory dentro da package "connection" com as configurações do seu banco (login/senha, nome do db e porta).
