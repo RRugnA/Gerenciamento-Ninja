@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
     <link rel="StyleSheet" type="text/css" href="css/style.css" media="screen" >
     <script src="https://kit.fontawesome.com/add39efd86.js" crossorigin="anonymous"></script>
-<title>SGMN - Lista de Miss�es</title>
+<title>SGMN - Lista de Missões</title>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 	
 	<div class="container my-5">
 	
-		<h2 class="my-4">Lista de Ninjas:</h2>
+		<h2 class="my-4">Lista de Missões:</h2>
 
 	    <table class="table mt-5">
 	    	<thead>
