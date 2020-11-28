@@ -40,6 +40,11 @@ Repositório destinado ao projeto da disciplina de POO, 4º Semestre da FATEC Mo
 ## Servidor:
 - Tomcat v9
 
+## Planos para implementar:
+- Área de Login
+- Versão responsiva
+- Pesquisa individual
+
 ## Como rodar o projeto:
 - Após compilar o projeto com a ide e subir no servidor, acesse localhost:8080/SGMN/?action=Home
 - Necessário importar o dump do banco de dados para correto funcionamento do CRUD (nome do db utilizado no projeto: "sgmn")
