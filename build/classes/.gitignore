@@ -1,5 +1,3 @@
-/action/
-/connection/
-/controller/
-/dao/
+/strategy/
 /model/
+/dao/

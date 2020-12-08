@@ -20,7 +20,7 @@
 	
 	<div class="container my-5">
 	
-		<h2 class="my-4">Lista de Ninjas:</h2>
+		<h2 class="my-4">Lista de Missões:</h2>
 
 	    <table class="table mt-5">
 	    	<thead>
@@ -45,7 +45,7 @@
 					<td>${ missao.rank }</td>
 					<td>$ ${ missao.pay }</td>
 					<td>${ missao.desc }</td>
-					<td>${ missao.teamLider }</td>
+					<td>${ missao.ninjaLider }</td>
 					
 					<td>
 						<a href="/SGMN/?action=SelecionarMissao&id=${ missao.id }"><i class="fas fa-edit"></i>
@@ -58,7 +58,7 @@
 			</tbody>
 			
 	    </table>
-	    <a class="btn-form mt-4" href="?action=Home" role="button">Voltar</a>
+	    <a class="btn-form mt-4" href="/SGMN/home.jsp" role="button">Voltar</a>
 	    
 	</div>
 </body>

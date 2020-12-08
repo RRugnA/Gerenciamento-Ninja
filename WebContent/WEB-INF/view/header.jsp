@@ -1,6 +1,6 @@
 <header>
 	<nav class="navbar">
-		<a href="?action=Home">
+		<a href="/SGMN/home.jsp">
 			<img class="img-header" src="img/konohaSymbol-removebg-preview.png" />
 		</a>			
 		<h1>Sistema de Gestão de Missões Ninja</h1>

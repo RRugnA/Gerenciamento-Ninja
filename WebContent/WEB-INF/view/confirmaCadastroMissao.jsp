@@ -23,7 +23,7 @@
 		<p>Equipe: ${ missao.teamId }</p>
 		<p>Descricao: ${ missao.desc }</p>
 		
-		<a href="?action=Home" role="button">Voltar</a>	
+		<a href="/SGMN/home.jsp" role="button">Voltar</a>	
 	</div>
 	
 </body>

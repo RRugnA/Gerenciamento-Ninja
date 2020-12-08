@@ -19,9 +19,9 @@
 		<p>Dados do cadastro:</p>
 		<p>Nome: ${ ninja.name }</p>
 		<p>Classe: ${ ninja.ninjaClass }</p>
-		<p>Equipe: ${ ninja.team }</p>
+		<p>Equipe: ${ ninja.teamId }</p>
 		
-		<a href="?action=Home" role="button">Voltar</a>	
+		<a href="/SGMN/home.jsp" role="button">Voltar</a>	
 	</div>
 	
 </body>

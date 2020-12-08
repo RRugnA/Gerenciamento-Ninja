@@ -36,17 +36,17 @@
 			<div class="form-group">
 				<label class="mb-0" for="ninjaTeam">Equipe:</label>
 					<select class="form-control" name="ninjaTeam" id="ninjaTeam">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
+						<option>1 - Kakashi</option>
+						<option>2 - Guy</option>
+						<option>3 - Kurenai</option>
+						<option>4 - Asuma</option>
 					</select>
 			</div>
 			
 			<input type="hidden" name="action" value="CadastrarNinja" />
 			
 			<div class="form-footer">
-				<a class="btn-form" href="?action=Home" role="button">Voltar</a>
+				<a class="btn-form" href="/SGMN/home.jsp" role="button">Voltar</a>
 				<button type="submit" class="btn-form">Cadastrar</button>
 			</div>			
 		</form>

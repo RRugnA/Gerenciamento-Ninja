@@ -56,7 +56,7 @@
 			</tbody>
 			
 	    </table>
-	    <a class="btn-form mt-4" href="?action=Home" role="button">Voltar</a>
+	    <a class="btn-form mt-4" href="/SGMN/home.jsp" role="button">Voltar</a>
 	    
 	</div>
 </body>
