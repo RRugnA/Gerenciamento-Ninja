@@ -46,6 +46,10 @@ Repositório destinado ao projeto da disciplina de POO, 4º Semestre da FATEC Mo
 - Pesquisa individual
 
 ## Como rodar o projeto:
-- Após compilar o projeto com a ide e subir no servidor, acesse localhost:8080/SGMN/?action=Home
+- Após compilar o projeto com a ide e subir no servidor, acesse localhost:8080/SGMN/home.jsp
 - Necessário importar o dump do banco de dados para correto funcionamento do CRUD (nome do db utilizado no projeto: "sgmn")
 - Após a importação do dump, configurar a classe ConnectionFactory dentro da package "connection" com as configurações do seu banco (login/senha, nome do db e porta).
+
+## Conflitos do Build Path (Eclipse):
+- Na pasta principal do projeto clique com o direito do mouse e escolha a opção Build Path >> Configure Build Path. Selecione JRE System Lybrarie, clique em editar.
+- Na próxima tela escolha a opção "Alternativa JRE" e selecione a opção disponível.
