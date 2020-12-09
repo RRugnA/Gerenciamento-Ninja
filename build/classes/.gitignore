@@ -1,4 +1,8 @@
-/strategy/
-/model/
-/dao/
 /connection/
+/controller/
+/dao/
+/model/
+/strategy/
+/command/
+/facade/
+/viewHelper/

@@ -1,17 +1,16 @@
 package strategy;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import connection.ConnectionFactory;
-import dao.DAO;
-import dao.MissaoDAO;
+import facade.Facade;
+import facade.IFacade;
 import model.Missao;
+import viewHelper.IViewHelper;
+import viewHelper.VhMissao;
 
 public class ExcluirMissaoStrategy implements IStrategy {
 
@@ -19,21 +18,11 @@ public class ExcluirMissaoStrategy implements IStrategy {
 	public String run(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Removendo missão!");
 		
-		String paramId = request.getParameter("id");
-		int id = Integer.parseInt(paramId);
-	 
-		System.out.println(id);
-	 
-		Missao missao = new Missao(id);
+		IViewHelper vhMissao = new VhMissao();
+		Missao missao = (Missao) vhMissao.getId(request);
 		
-		try(Connection connection = new ConnectionFactory().getConnection()){
-			DAO<Missao> missaoDAO = new MissaoDAO(connection);
-			missaoDAO.delete(missao);
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		IFacade facade = new Facade();
+		facade.excluir(missao);
 	 
 		return "redirect:?action=ExibirMissao";
 	}

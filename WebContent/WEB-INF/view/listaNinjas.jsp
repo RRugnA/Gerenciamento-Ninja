@@ -40,8 +40,8 @@
 					<td>${ ninja.ninjaClass }</td>
 					<td>${ ninja.ninjaLeader }</td>
 					<td>
-						<a href="/SGMN/?action=SelecionarNinja&id=${ ninja.id }"><i class="fas fa-edit"></i>
-						</a><a href="/SGMN/?action=ExcluirNinja&id=${ ninja.id }"><i class="fas fa-trash-alt"></i></a>
+						<a href="/SGMN/editar-ninja?action=SelecionarNinja&id=${ ninja.id }"><i class="fas fa-edit"></i>
+						</a><a href="/SGMN/exibir-ninjas?action=ExcluirNinja&id=${ ninja.id }"><i class="fas fa-trash-alt"></i></a>
 					</td>
 				</tr>
 			</c:forEach>

@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
-<c:url value="/" var="linkEntradaServlet"/>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -26,7 +25,7 @@
 				<div class="col-6">
 					<div id="submenu1" class="invisivel">
 						<div>
-							<form class="menu-main" action="${ linkEntradaServlet }" method="post">				
+							<form class="menu-main" action="cadastrar-ninja" method="post">				
 								<input type="hidden" name="action" value="Form" />
 								<input type="hidden" name="form" value="ninja" />
 								<button class="btn-submenu btn-block" type="submit">
@@ -36,7 +35,7 @@
 						</div>
 
 						<div>
-							<form class="menu-main" action="${ linkEntradaServlet }" method="post">	
+							<form class="menu-main" action="exibir-ninjas" method="post">	
 								<input type="hidden" name="action" value="ExibirNinjas" />
 								<input type="hidden" name="list" value="ninja" />
 								<button class="btn-submenu btn-block" type="submit">
@@ -60,7 +59,7 @@
 				<div class="col-6">
 					<div id="submenu2" class="invisivel">
 						<div>
-							<form class="menu-main" action="${ linkEntradaServlet }" method="post">			
+							<form class="menu-main" action="cadastrar-missao" method="post">			
 								<input type="hidden" name="action" value="Form" />
 								<input type="hidden" name="form" value="mission" />
 								<button class="btn-submenu btn-block" type="submit">
@@ -71,7 +70,7 @@
 
 						<div>
 <!-- 							falta implementar -->
-							<form class="menu-main" action="${ linkEntradaServlet }" method="post">	
+							<form class="menu-main" action="exibir-missoes" method="post">	
 								<input type="hidden" name="action" value="ExibirMissao" />
 								<input type="hidden" name="list" value="mission" />
 								<button class="btn-submenu btn-block" type="submit">

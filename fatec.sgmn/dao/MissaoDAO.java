@@ -9,7 +9,7 @@ import java.util.List;
 
 import model.Missao;
 
-public class MissaoDAO implements DAO<Missao> {
+public class MissaoDAO implements IDAO<Missao> {
 	
 	Connection connection;
 	
@@ -43,7 +43,7 @@ public class MissaoDAO implements DAO<Missao> {
 		
 		List<Missao> missoes = new ArrayList<Missao>();
 		
-		String sql2 = "select m.mis_id, m.mis_name, m.mis_rank, m.mis_pay, m.mis_desc, t.tea_lider from missions as m join teams as t on m.mis_team_id = t.tea_id";
+		String sql2 = "select m.mis_id, m.mis_name, m.mis_rank, m.mis_pay, m.mis_desc, t.tea_lider from missions as m join teams as t on m.mis_team_id = t.tea_id order by m.mis_id";
 		
 		try(PreparedStatement stm = connection.prepareStatement(sql2)){
 			stm.execute();

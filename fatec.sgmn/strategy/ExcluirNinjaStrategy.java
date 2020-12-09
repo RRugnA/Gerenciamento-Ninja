@@ -1,17 +1,16 @@
 package strategy;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import connection.ConnectionFactory;
-import dao.DAO;
-import dao.NinjaDAO;
+import facade.Facade;
+import facade.IFacade;
 import model.Ninja;
+import viewHelper.IViewHelper;
+import viewHelper.VhNinja;
 
 public class ExcluirNinjaStrategy implements IStrategy {
 
@@ -19,21 +18,11 @@ public class ExcluirNinjaStrategy implements IStrategy {
 	public String run(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Removendo ninja!");
 		
-		String paramId = request.getParameter("id");
-		int id = Integer.parseInt(paramId);
-	 
-		System.out.println(id);
-	 
-		Ninja ninja = new Ninja(id);
+		IViewHelper vhNinja = new VhNinja();
+		Ninja ninja = (Ninja) vhNinja.getId(request);
 		
-		try(Connection connection = new ConnectionFactory().getConnection()){
-			DAO<Ninja> ninjaDAO = new NinjaDAO(connection);
-			ninjaDAO.delete(ninja);
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		IFacade facade = new Facade();
+		facade.excluir(ninja);
 	 
 		return "redirect:?action=ExibirNinjas";
 	}

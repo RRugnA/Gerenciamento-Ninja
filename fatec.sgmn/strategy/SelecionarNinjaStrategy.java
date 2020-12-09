@@ -1,17 +1,16 @@
 package strategy;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import connection.ConnectionFactory;
-import dao.DAO;
-import dao.NinjaDAO;
+import facade.Facade;
+import facade.IFacade;
 import model.Ninja;
+import viewHelper.IViewHelper;
+import viewHelper.VhNinja;
 
 public class SelecionarNinjaStrategy implements IStrategy {
 
@@ -19,19 +18,11 @@ public class SelecionarNinjaStrategy implements IStrategy {
 	public String run(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Mostrando dados do ninja!");
 		
-		String paramId = request.getParameter("id");
-		int id = Integer.parseInt(paramId);
+		IViewHelper vhNinja = new VhNinja();
+		Ninja ninja = (Ninja) vhNinja.getId(request);
 		
-		Ninja ninja = new Ninja(id);
-		
-		try(Connection connection = new ConnectionFactory().getConnection()){
-			System.out.println("Conexao obtida");
-			DAO<Ninja> ninjaDAO = new NinjaDAO(connection);
-			ninja = ninjaDAO.getId(ninja);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
+		IFacade facade = new Facade();
+		ninja = (Ninja) facade.consultar(ninja);		
 		
 		request.setAttribute("ninja", ninja);
 		

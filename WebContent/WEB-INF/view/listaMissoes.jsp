@@ -49,8 +49,8 @@
 					<td>${ missao.ninjaLider }</td>
 					
 					<td>
-						<a href="/SGMN/?action=SelecionarMissao&id=${ missao.id }"><i class="fas fa-edit"></i>
-						</a><a href="/SGMN/?action=ExcluirMissao&id=${ missao.id }"><i class="fas fa-trash-alt"></i></a>
+						<a href="/SGMN/editar-missao?action=SelecionarMissao&id=${ missao.id }"><i class="fas fa-edit"></i>
+						</a><a href="/SGMN/exibir-missoes?action=ExcluirMissao&id=${ missao.id }"><i class="fas fa-trash-alt"></i></a>
 					</td>
 				</tr>
 				

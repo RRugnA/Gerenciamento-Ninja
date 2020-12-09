@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
-<c:url value="/" var="linkEntradaServlet"/>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -17,7 +16,7 @@
 	<div class="fundo-form-missao">
 		<div class="container form-container" >		
 		
-			<form class="form-area" action="${ linkEntradaServlet }" method="post">
+			<form class="form-area" action="cadastrar-missao" method="post">
 				<h1 class="font-weight-bold">Cadastro de Missões</h1>
 				
 				<div class="form-group">

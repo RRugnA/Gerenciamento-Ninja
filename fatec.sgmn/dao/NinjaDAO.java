@@ -9,7 +9,7 @@ import java.util.List;
 
 import model.Ninja;
 
-public class NinjaDAO implements DAO<Ninja> {
+public class NinjaDAO implements IDAO<Ninja> {
 	
 	Connection connection;
 	
@@ -41,7 +41,7 @@ public class NinjaDAO implements DAO<Ninja> {
 		
 		List<Ninja> ninjas = new ArrayList<Ninja>();
 		
-		String sql = "select n.nja_id, n.nja_name, n.nja_class, t.tea_lider from ninjas as n join teams as t on n.nja_team_id = t.tea_id";
+		String sql = "select n.nja_id, n.nja_name, n.nja_class, t.tea_lider from ninjas as n join teams as t on n.nja_team_id = t.tea_id order by n.nja_id";
 		
 		try(PreparedStatement stm = connection.prepareStatement(sql)){
 			stm.execute();
